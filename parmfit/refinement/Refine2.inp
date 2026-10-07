@@ -1,5 +1,5 @@
 #model=uma(size=uma-s-1p1,task=omol)
-#parmfit(method=correction,input=CORR2.in)
+#parmfit(method=refinement,input=Refine2.in)
 #device=gpu0
 
 I     3.54000000    1.42000000    0.00000000

@@ -111,7 +111,7 @@ Tleap status:
   Notes: 1
 
 Warnings:
-  Environment contains potentially charged standard residues outside the site core: _1:THR, _3:LYS, _4:GLU, _9:LYS, _13:GLU, _15:LYS, _23:ASP, _24:LYS
+  Potentially charged standard residues within 8 Å of the metal but outside the large model: _398:ARG
 ======================================================================
 
 

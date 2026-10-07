@@ -23,7 +23,7 @@ Parsed configuration:
 Task: parmfit
 model          : uma(size=uma-s-1p1,task=omol)
 method         : correction
-input          : CORR1.in
+input          : Refine1.in
 device         : gpu0
 
                              Coordinates                              
@@ -45,13 +45,13 @@ Group 1 (inline)
 12   O              1.448000             2.645000            -2.189000
 13   H              1.536000             2.564000            -1.228000
 
-[Correction] initial parameter assignment ...
+[Refinement] initial parameter assignment ...
 
 ======================================================================
-                       Parmfit Correction Setup                       
+                       Parmfit Refinement Setup                       
 ======================================================================
 Input mol2:        choi001_gaff2.mol2
-Initial frcmod:    CORR1_work/CORR1_original.frcmod
+Initial frcmod:    Refine1_work/Refine1_original.frcmod
 Topology atoms:    13
 Topology bonds:    13
 Bonded refinement: mSeminario
@@ -73,8 +73,8 @@ Assigned terms:
   nonbonds:   13 (unmatched: 0)
 ======================================================================
 
-[Correction] MLIP geometry optimization ...
-[Correction] MLIP Hessian + mSeminario ...
+[Refinement] MLIP geometry optimization ...
+[Refinement] MLIP Hessian + mSeminario ...
 
 ============================================================================================================
                                        mSeminario bond/angle changes                                        
@@ -123,7 +123,7 @@ Only changed force-field items are shown below.
 (9,11,12)        ca-ca-oh                k=69.500000  theta=119.9000          | 	 k=89.225194  theta=117.6591         
 (11,12,13)       ca-oh-ho                k=49.000000  theta=108.5800          | 	 k=69.295820  theta=109.4221         
 
-[Correction] TorsionFit ...
+[Refinement] TorsionFit ...
 
 ============================================================================================================
                                          TorsionFit torsion changes                                         
@@ -144,21 +144,21 @@ Only changed force-field items are shown below.
 (9,11,12,13)       ca-ca-oh-ho                term=3 k=NA  n=NA  phase=NA               |  k=0.063824  n=3.000  phase=177.9751
 (9,11,12,13)       ca-ca-oh-ho                term=4 k=NA  n=NA  phase=NA               |  k=0.021260  n=4.000  phase=-170.0242
 
-[Correction] export GROMACS ...
-[Correction] export Amber ...
+[Refinement] export GROMACS ...
+[Refinement] export Amber ...
 
 ======================================================================
-                      PARMFIT CORRECTION RESULT                       
+                      PARMFIT REFINEMENT RESULT                       
 ======================================================================
 Status: completed
 Input mol2: choi001_gaff2.mol2
 
 Main products:
-  Amber mol2:   CORR1_work/CORR1_maple.mol2
-  Amber frcmod: CORR1_work/CORR1_maple.frcmod
-  GROMACS top:  CORR1_work/CORR1_maple.top
-  GROMACS gro:  CORR1_work/CORR1_maple.gro
-  Amber tleap:  CORR1_work/CORR1_maple_tleap.in
+  Amber mol2:   Refine1_work/Refine1_maple.mol2
+  Amber frcmod: Refine1_work/Refine1_maple.frcmod
+  GROMACS top:  Refine1_work/Refine1_maple.top
+  GROMACS gro:  Refine1_work/Refine1_maple.gro
+  Amber tleap:  Refine1_work/Refine1_maple_tleap.in
 
 Stage timing:
   Hessian + mSeminario                  7s
@@ -179,7 +179,7 @@ Parameter changes:
 Torsion energy trace:
   
 torsion bond (11, 12):
-    scan xyz: CORR1_work/torsionfit/CORR1_torsionfit_11-12_scan_final.xyz
+    scan xyz: Refine1_work/torsionfit/Refine1_torsionfit_11-12_scan_final.xyz
     angle_deg    MLIP_ref     orig_ref    stage0_ref    stage1_ref    stage2_ref
      359.9226    0.000000    0.000000    0.000000    0.000000    0.000000
      369.9226    0.159524    0.185740    0.198823    0.154343    0.159719
@@ -224,7 +224,7 @@ TorsionFit:
   state: enabled
   torsion bonds: (11, 12)
   scan files:
-    (11, 12): CORR1_work/torsionfit/CORR1_torsionfit_11-12_scan_final.xyz
+    (11, 12): Refine1_work/torsionfit/Refine1_torsionfit_11-12_scan_final.xyz
   stage1: completed
   stage2: enabled, max_fast_cycles=3
   fast cycles: executed=2, accepted=1, rejected=1
@@ -243,8 +243,8 @@ by the leading character of the atom type, which MAPLE types do not
 carry, so it writes an empty BONDS_INC_HYDROGEN section and SHAKE
 (ntc=2) would constrain nothing. ParmEd rebuilds that section from
 ATOMIC_NUMBER, e.g.:
-  tleap -f CORR1_maple_tleap.in
-  parmed -p CORR1_maple_gas.prmtop <<< $'outparm CORR1_maple_gas_parmed.prmtop\nquit'
+  tleap -f Refine1_maple_tleap.in
+  parmed -p Refine1_maple_gas.prmtop <<< $'outparm Refine1_maple_gas_parmed.prmtop\nquit'
 ======================================================================
 
 
