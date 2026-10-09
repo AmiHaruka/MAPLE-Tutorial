@@ -30,7 +30,7 @@ device         : gpu0
 **********************************************************************
 
 Group 1 (PDB File)
-Resolved PDB: /home/hungn/Desktop/MyRepo/MLP/MAPLE/examples/parmfit_tutorial/MaDA.pdb
+Resolved PDB: /home/hungn/Desktop/MyRepo/MLP/parmfit_tutorial/NCAA/Case2/MaDA.pdb
 PDB coordinates are parsed by the parmfit route at runtime.
 --------------------
 
@@ -41,12 +41,12 @@ Target: _89:HIF (protein)
   PDB residue templates: matched=516, backbone_only=1, unmatched=0
     non-standard (matched backbone only): _89:HIF (target)
     template overrides (renamed): _10:CYM (CYX->CYM), _74:CYM (CYX->CYM)
-  PDB target charge: _89:HIF = 0 (from your input)
+  PDB target charge: _89:HIF = -2 (from your input)
   [NCAA] MLIP model preparation + reference optimization ...
   NCAA target selector: HIF89
   residue name: HF1
   chirality: L
-  net charge / spin multiplicity: 0 1
+  net charge / spin multiplicity: -2 1
   protein ff: ff14SB
   bonded refinement: mseminario
   charge fitting: resp
@@ -68,11 +68,11 @@ Target: _89:HIF
 Residue name: HF1
 Chirality: L
 Protein ff: ff14SB
-Res charge/spin-multi: 0 1
+Res charge/spin-multi: -2 1
 Charge fitting: resp
 Charge level: HF/6-31G(d)
-Target charge: 0
-Actual charge: -0.00000200
+Target charge: -2
+Actual charge: -1.99999900
 Charge MOL2: NCAA2_work/ncaa/HIF89/NCAA2_capped.mol2
 
 Main products:
@@ -82,11 +82,11 @@ Main products:
   tleap input:    NCAA2_work/NCAA2_ncaa_tleap.in
 
 Stage timing:
-  TorsionFit                      1h 34m 19s
-  charge fitting                   13m 31s
-  Hessian + mSeminario              1m 13s
-  model preparation + reference     1m 06s
-  tleap validation                      6s
+  TorsionFit                      1h 53m 07s
+  charge fitting                    7m 56s
+  Hessian + mSeminario              1m 35s
+  model preparation + reference     1m 04s
+  tleap validation                      7s
   AmberTools template build             0s
   final export                          0s
 
@@ -96,7 +96,7 @@ Next step:
 
 Tleap status:
   Errors: 0
-  Warnings: 12
+  Warnings: 3
   Notes: 0
 
 Warnings:
@@ -105,23 +105,23 @@ Warnings:
 
 
 
-Program started: 2026-09-30 22:01:26
+Program started: 2026-10-09 07:09:34
 
 ======================================================================
                       TIMING SUMMARY
 ======================================================================
-Input Reading.......................................   1.151 s  (   0.0 %)
-  Settings Parsing....................................   1.149 s  (  99.9 %)
-  Coordinate Section Parsing..........................   0.000 s  (   0.0 %)
+Input Reading.......................................   1.172 s  (   0.0 %)
+  Settings Parsing....................................   1.162 s  (  99.1 %)
+  Coordinate Section Parsing..........................   0.001 s  (   0.1 %)
   Post-Processing Expansion...........................   0.000 s  (   0.0 %)
-MLP Initialization..................................  10.544 s  (   0.2 %)
-Job Dispatching..................................... 6616.045 s  (  99.8 %)
-  Parmfit optimization................................ 6616.042 s  ( 100.0 %)
-    Parmfit NCAA........................................ 6615.987 s  ( 100.0 %)
+MLP Initialization..................................  13.380 s  (   0.2 %)
+Job Dispatching..................................... 7432.354 s  (  99.8 %)
+  Parmfit optimization................................ 7432.352 s  ( 100.0 %)
+    Parmfit NCAA........................................ 7432.261 s  ( 100.0 %)
 ======================================================================
-Total wall time: 6627.740 s
-Total CPU time: 5812.150 s
+Total wall time: 7446.907 s
+Total CPU time: 6962.897 s
 ======================================================================
 
-Program ended: 2026-09-30 23:51:54
-TOTAL RUN TIME: 0 days 1 hours 50 minutes 27 seconds 740 msec
+Program ended: 2026-10-09 09:13:41
+TOTAL RUN TIME: 0 days 2 hours 4 minutes 6 seconds 906 msec

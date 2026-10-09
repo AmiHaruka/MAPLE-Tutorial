@@ -11,7 +11,7 @@ add_resid                =
 # NCAA run
 # Non-standard amino acid declaration and residue building
 # 1:1 with ncaa_resids
-ncaa_charges             = 0,0
+ncaa_charges             = -2,0
 # 1:1 with ncaa_resids; keep within 3 characters (PDB limit)
 ncaa_resnames            = HF1,WF1
 # multiplicity for the NCAA QM jobs
@@ -30,7 +30,7 @@ torsion_bonds            = 3-8,8-11,6-60,22-25;5-6
 # TorsionFit
 # Torsion parameter fitting switches and scan controls
 torsionfit               = true
-# radical centers for improper fitting (!!experimental!!); NCAA: residue-local 1-based (same space as torsion_bonds); CORR: mol2 serial
+# radical centers for improper fitting (!!experimental!!); NCAA: residue-local 1-based (same space as torsion_bonds); Refinement: mol2 serial
 radical_center           = 
 # refit when parmchk2 penalty exceeds (!!experimental!!)
 p_thresh                 = 30.0
@@ -70,7 +70,7 @@ qm_compare               = false
 
 # charge fitting
 # Charge fitting method, level and RESP backend
-# (none, resp, MLIP models e.g. aimnet2, antechamber methods e.g. abcg2/bcc)
+# (none, resp, MLIP models e.g. aimnet2, antechamber methods e.g. abcg2/bcc; defaults to abcg2 when mol2= is auto-generated)
 chg_fit                  = resp
 # charge level METHOD/BASIS (engine syntax)
 chg_level                = HF/6-31G(d)

@@ -1,0 +1,35 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+addAtomTypes {
+    { "Z1" "S" "sp3" }
+    { "Z2" "N" "sp3" }
+    { "Z3" "N" "sp3" }
+    { "Z4" "N" "sp3" }
+    { "Z5" "N" "sp3" }
+    { "M1" "Fe" "sp3" }
+}
+CM1 = loadmol2 CM1.mol2
+HM1 = loadmol2 HM1.mol2
+FE1 = loadmol2 FE1.mol2
+ILM = loadmol2 ILM.mol2
+loadamberparams frcmod.ions234lm_126_tip3p
+loadamberparams MetalAA3_metal.frcmod
+loadamberparams ILM.frcmod
+mol = loadpdb MetalAA3_metal_tleap.pdb
+bond mol.461.NA mol.462.FE
+bond mol.461.NB mol.462.FE
+bond mol.461.NC mol.462.FE
+bond mol.461.ND mol.462.FE
+bond mol.400.SG mol.462.FE
+bond mol.399.C mol.400.N
+bond mol.400.C mol.401.N
+bond mol.401.C mol.402.N
+savepdb mol MetalAA3_metal_tleap_dry.pdb
+saveamberparm mol MetalAA3_metal_tleap_dry.prmtop MetalAA3_metal_tleap_dry.inpcrd
+solvatebox mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+savepdb mol MetalAA3_metal_tleap_solvated.pdb
+saveamberparm mol MetalAA3_metal_tleap_solvated.prmtop MetalAA3_metal_tleap_solvated.inpcrd
+quit

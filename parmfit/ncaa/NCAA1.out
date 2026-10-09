@@ -30,7 +30,7 @@ device         : gpu0
 **********************************************************************
 
 Group 1 (PDB File)
-Resolved PDB: /home/hungn/Desktop/MyRepo/MLP/MAPLE/examples/parmfit_tutorial/MaDA.pdb
+Resolved PDB: /home/hungn/Desktop/MyRepo/MLP/parmfit_tutorial/NCAA/Case1/MaDA.pdb
 PDB coordinates are parsed by the parmfit route at runtime.
 --------------------
 
@@ -41,12 +41,12 @@ Target: _89:HIF (protein)
   PDB residue templates: matched=516, backbone_only=1, unmatched=0
     non-standard (matched backbone only): _89:HIF (target)
     template overrides (renamed): _10:CYM (CYX->CYM), _74:CYM (CYX->CYM)
-  PDB target charge: _89:HIF = 0 (from your input)
+  PDB target charge: _89:HIF = -2 (from your input)
   [NCAA] MLIP model preparation + reference optimization ...
   NCAA target selector: HIF89
   residue name: HF1
   chirality: L
-  net charge / spin multiplicity: 0 1
+  net charge / spin multiplicity: -2 1
   protein ff: ff14SB
   bonded refinement: mseminario
   charge fitting: resp
@@ -55,9 +55,6 @@ Target: _89:HIF (protein)
   [NCAA] AmberTools template build ...
   [NCAA] MLIP Hessian + mSeminario ...
   [NCAA] TorsionFit skipped ...
-
-[TorsionFit] improper refit targets detected -> skipped because torsionfit=False.
-  improper refit targets: 2 (parmchk2 estimates kept)
   [NCAA] writing refined templates + tleap input ...
   [NCAA] tleap validation ...
   [NCAA] route completed; final summary follows.
@@ -71,11 +68,11 @@ Target: _89:HIF
 Residue name: HF1
 Chirality: L
 Protein ff: ff14SB
-Res charge/spin-multi: 0 1
+Res charge/spin-multi: -2 1
 Charge fitting: resp
 Charge level: HF/6-31G(d)
-Target charge: 0
-Actual charge: -0.00000200
+Target charge: -2
+Actual charge: -2.00000000
 Charge MOL2: NCAA1_work/ncaa/HIF89/NCAA1_capped.mol2
 
 Main products:
@@ -85,10 +82,10 @@ Main products:
   tleap input:    NCAA1_work/NCAA1_ncaa_tleap.in
 
 Stage timing:
-  charge fitting                    9m 41s
-  Hessian + mSeminario              1m 20s
-  model preparation + reference        52s
-  tleap validation                      7s
+  charge fitting                    7m 46s
+  Hessian + mSeminario              1m 30s
+  model preparation + reference        49s
+  tleap validation                     11s
   AmberTools template build             0s
   final export                          0s
 
@@ -98,7 +95,7 @@ Next step:
 
 Tleap status:
   Errors: 0
-  Warnings: 4
+  Warnings: 3
   Notes: 0
 
 Warnings:
@@ -107,23 +104,23 @@ Warnings:
 
 
 
-Program started: 2026-09-30 05:11:28
+Program started: 2026-10-09 06:58:34
 
 ======================================================================
                       TIMING SUMMARY
 ======================================================================
-Input Reading.......................................   0.016 s  (   0.0 %)
-  Settings Parsing....................................   0.015 s  (  92.0 %)
-  Coordinate Section Parsing..........................   0.000 s  (   3.1 %)
+Input Reading.......................................   1.156 s  (   0.2 %)
+  Settings Parsing....................................   1.144 s  (  98.9 %)
+  Coordinate Section Parsing..........................   0.001 s  (   0.1 %)
   Post-Processing Expansion...........................   0.000 s  (   0.0 %)
-MLP Initialization..................................   8.923 s  (   1.2 %)
-Job Dispatching..................................... 721.925 s  (  98.8 %)
-  Parmfit optimization................................ 721.923 s  ( 100.0 %)
-    Parmfit NCAA........................................ 721.869 s  ( 100.0 %)
+MLP Initialization..................................  12.006 s  (   1.9 %)
+Job Dispatching..................................... 619.163 s  (  97.9 %)
+  Parmfit optimization................................ 619.161 s  ( 100.0 %)
+    Parmfit NCAA........................................ 619.058 s  ( 100.0 %)
 ======================================================================
-Total wall time: 730.863 s
-Total CPU time: 144.841 s
+Total wall time: 632.325 s
+Total CPU time: 157.245 s
 ======================================================================
 
-Program ended: 2026-09-30 05:23:39
-TOTAL RUN TIME: 0 days 0 hours 12 minutes 10 seconds 863 msec
+Program ended: 2026-10-09 07:09:06
+TOTAL RUN TIME: 0 days 0 hours 10 minutes 32 seconds 324 msec

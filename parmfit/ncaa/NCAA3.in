@@ -3,7 +3,7 @@
 
 # Two residues declared together; charges/names pair 1:1 with ncaa_resids
 ncaa_resids=HIF89,TRP482
-ncaa_charges=0,0
+ncaa_charges=-2,0
 ncaa_resnames=HF1,WF1
 chg_level=HF/6-31G(d)
 

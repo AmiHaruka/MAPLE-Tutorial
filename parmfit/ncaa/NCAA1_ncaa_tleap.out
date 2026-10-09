@@ -56,14 +56,14 @@ Loading PDB file: ./NCAA1_ncaa_tleap.pdb
 Checking 'mol'....
 
 /home/hungn/BioMed/AMBER24/ORG/bin/teLeap: Warning!
-The unperturbed charge of the unit (-2.000002) is not zero.
+The unperturbed charge of the unit (-4.000000) is not zero.
 Checking parameters for unit 'mol'.
 Checking for bond parameters.
 Checking for angle parameters.
 check:  Warnings: 1
 Unit is OK.
-Total unperturbed charge:  -2.000002
-Total perturbed charge:    -2.000002
+Total unperturbed charge:  -4.000000
+Total perturbed charge:    -4.000000
   Solute vdw bounding box:              87.949 63.372 67.525
   Total bounding box for atom centers:  107.949 83.372 87.525
   Solvent unit box:                     18.774 18.774 18.774
@@ -71,8 +71,8 @@ Total perturbed charge:    -2.000002
   Volume: 873595.949 A^3 
   Total mass 440364.502 amu,  Density 0.837 g/cc
   Added 21157 residues.
-2 Na+ ions required to neutralize.
-Adding 2 counter ions to "mol" using 1A grid
+4 Na+ ions required to neutralize.
+Adding 4 counter ions to "mol" using 1A grid
 Grid extends from solute vdw + 1.37  to  7.44
 Resolution:      1.00 Angstrom.
 Solvent present: replacing closest with ion
@@ -82,13 +82,15 @@ Calculating grid charges
 Placed Na+ in mol at (43.82, 2.09, 2.86).
 (Replacing solvent molecule)
 Placed Na+ in mol at (7.75, -3.34, -22.64).
+(Replacing solvent molecule)
+Placed Na+ in mol at (35.65, 6.71, 0.10).
+(Replacing solvent molecule)
+Placed Na+ in mol at (-24.09, 5.95, 30.69).
 
 Done adding ions.
-
-/home/hungn/BioMed/AMBER24/ORG/bin/teLeap: Warning!
-addIons: 1st Ion & target unit have charges of the same sign:
-     unit charge = -2.00001e-06; ion1 charge = -1;
-     can't neutralize.
+ 0.000000 0 1 0
+0 Cl- ion required to neutralize.
+Adding 0 counter ions to "mol" using 1A grid
 Writing pdb file: NCAA1_ncaa_solvated.pdb
    printing CRYST1 record to PDB file with box info
 
@@ -143,9 +145,9 @@ Marking per-residue atom chain types.
 
 	CLEU	1
 	NTHR	1
-	WAT	21155
+	WAT	21153
   )
  (no restraints)
 	Quit
 
-Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
+Exiting LEaP: Errors = 0; Warnings = 3; Notes = 0.
